@@ -35,4 +35,16 @@ Result: The pipeline successfully automated the process, copying files to the de
 
 
 Project 2:
+Situation: I was tasked with creating an Azure Data Factory (ADF) pipeline to efficiently transfer files between folders in Azure Data Lake Storage (ADLS). The main challenge was to ensure that only non-empty files were transferred, optimizing storage and reducing unnecessary data movement.
 
+Task: My goal was to design a pipeline that would dynamically filter out empty files, transferring only those containing data from the source to the destination folder. This required setting up the pipeline to detect and handle file sizes effectively.
+
+Action:
+
+Configure ADF for ADLS: Created linked services to connect ADF to the source and destination folders in ADLS.
+Set up Metadata and File Validation: Used the Get Metadata activity to retrieve file information from the source folder, setting it to check each file’s size.
+Loop and Filter with ForEach Activity: Implemented a ForEach activity to iterate through files, dynamically validating each one’s size to confirm it wasn’t empty.
+Execute Conditional Copy: Within the ForEach loop, applied a Copy activity with conditional logic, transferring only files that met the non-empty requirement to the destination folder.
+Result: The pipeline successfully automated the selective transfer of non-empty files. By eliminating empty files from the process, it optimized storage and processing costs, enhancing the efficiency of data management.
+
+This STAR-based description highlights the steps and rationale for your pipeline’s design, showing how you ensured the solution was both efficient and scalable. Let me know if you'd like any further adjustments!
