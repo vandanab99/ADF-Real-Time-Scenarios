@@ -34,3 +34,5 @@ Result: The pipeline successfully automated the process, copying files to the de
 ![image](https://github.com/user-attachments/assets/4a8df522-f94a-4db6-ae2e-d66d2c88cbae)
 
 
+Project 2:
+
